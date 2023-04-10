@@ -1,4 +1,8 @@
 <?php
+
+namespace src\lib;
+
+use src\lib\Main;
 class Htitle 
 {
     private $Attribute;

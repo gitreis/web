@@ -1,6 +1,8 @@
 <?php
 
-include_once 'src/lib/main.class.php';
+namespace src\lib;
+
+use src\lib\Main;
 
 class Atag extends Main
 {

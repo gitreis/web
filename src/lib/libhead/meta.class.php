@@ -1,9 +1,8 @@
 <?php
 
-namespace libhead;
+namespace src\lib\libhead;
 
-
-use lib\Main;
+use src\lib\Main;
 
 Class Meta extends Main
 {

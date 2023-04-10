@@ -1,7 +1,6 @@
 <?php
 
-include_once 'autoload.php';
-include_once 'rotas.php';
+use src\lib\Main;
 
 $sFooter = "©Todos Direitos Reservados";
 

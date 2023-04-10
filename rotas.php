@@ -1,5 +1,8 @@
 <?php
 
+namespace rotas;
+
+
 switch ($url) {
     case '/':
         # code...

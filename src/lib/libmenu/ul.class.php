@@ -1,6 +1,6 @@
 <?php
 
-namespace src\lib\menu;
+namespace src\lib\libmenu;
 
 use src\lib\Main;
 
