@@ -2,25 +2,26 @@
 
 namespace src\lib\libhead;
 
-use src\lib\Main;
+use \src\lib\Main as Main;
 
-class Link extends Main
+Class Meta extends Main
 {
-    public $sTag = 'link';
-    public $aAttribute =
+    public $sTag = 'meta';
+    public $aAttribute = 
     [
         [
-            'href'      => 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css',
-            'rel'       => 'stylesheet',
-            'integrity' => 'sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp'
+            'charset'    => 'UTF-8', 
+            'http-equiv' => 'X-UA-Compatible', 
+            'content'    => 'IE=edge'
+
         ],
         [
-            'rel'  => 'stylesheet',
-            'href' => '../style.css'
+            'name'     => 'viewport',
+            'content'       => 'width=device-width', 
+            'initial-scale' => '1.0'
         ]
     ];
     /**
-     * @param array $_LINK
      * @return object
      */
     function __construct()
@@ -30,7 +31,7 @@ class Link extends Main
     /**
      * @return string $sAttribute
      */
-    public function printLink()
+    public function printMeta()
     {
         $aScript = parent::getaAttribute();
         $sTagValue = parent::getsTag();

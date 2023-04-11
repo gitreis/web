@@ -2,7 +2,7 @@
 
 namespace src\lib\libbody;
 
-use src\lib\Main;
+use \src\lib\Main as Main;
 
 class Header extends Main
 {

@@ -2,11 +2,11 @@
 
 namespace src\lib\libform;
 
-use src\lib\Main;
+use \src\lib\Main as Main;
 
-class Form extends Main
+class Input extends Main
 {
-    public $sTag = 'form';
+    public $sTag = 'input';
     function __construct()
     {
         parent::__construct(null, null, $this->sTag);

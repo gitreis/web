@@ -2,9 +2,7 @@
 
 namespace src\lib\libbody;
 
-use src\lib\Main;
-
-include_once 'src/lib/main.class.php';
+use \src\lib\Main as Main;
 
 class Body extends Main
 {

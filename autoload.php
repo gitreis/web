@@ -2,5 +2,5 @@
 
   spl_autoload_register(function($className) 
   {
-    include_once str_replace('\\',DIRECTORY_SEPARATOR, strtolower($className).".class.php");
+    include_once str_replace('\\','/', $className.".class.php");
   });

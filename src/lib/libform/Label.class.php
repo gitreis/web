@@ -2,7 +2,7 @@
 
 namespace src\lib\libform;
 
-use src\lib\Main;
+use \src\lib\Main as Main;
 
 class Label extends Main
 {

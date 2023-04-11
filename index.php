@@ -1,28 +1,28 @@
 <?php
 
-use src\lib\Main;
+include_once "autoload.php";
 
 $sFooter = "©Todos Direitos Reservados";
 
-$oMeta  = new Meta();
-$oTitle = new Title();
-$oLink  = new Link();
-$oScript = new Script();
+$oMeta  = new \src\lib\libhead\Meta();
+$oTitle = new \src\lib\Title();
+$oLink  = new \src\lib\libhead\Link();
+$oScript = new \src\lib\libhead\Script();
 $sMetaContent = $oMeta->printMeta().$oTitle->printMain().$oLink->printLink().$oScript->printScript();
-$oHead  = new Head($sMetaContent);
+$oHead  = new \src\lib\libhead\Head($sMetaContent);
 $sHeadContent = $oHead->printMain();
 
-$oHeader= new Header();
+$oHeader= new \src\lib\libbody\Header();
 
-$oConection = new Conection();
+$oConection = new \src\lib\Conection();
 $aConection = $oConection->getSelect();
 
-$sThead = new Trow([new Tdata($aConection)]);
-$oThead = new Thead($sThead);
-$oTbody = new Tbody($sTbody);
-$oTfoot = new Tfoot($sTfoot);
-$oTr    = new Trow($sTr);
-$oTable = new Table($oThead,$oTbody,$oTfoot);
+$sThead = new \src\lib\libtable\Trow([new \src\lib\libtable\Tdata($aConection)]);
+$oThead = new \src\lib\libtable\Thead($sThead);
+$oTbody = new \src\lib\libtable\Tbody($sTbody);
+$oTfoot = new \src\lib\libtable\Tfoot($sTfoot);
+$oTr    = new \src\lib\libtable\Trow($sTr);
+$oTable = new \src\lib\libtable\Table($oThead,$oTbody,$oTfoot);
 
 exit;
 $oA = new Atag($sContent);
@@ -35,7 +35,7 @@ $sMenuContent = $oUl->printMain();
 $oMenu   = new Menu($sMenuContent);
 $sMenu = $oMenu->printMain();
 
-$oFooter = new Footer($sFooter);
+$oFooter = new \src\lib\libbody\Footer($sFooter);
 $sFooter = $oFooter->printMain();
 
 

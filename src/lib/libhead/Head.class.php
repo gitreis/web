@@ -2,7 +2,7 @@
 
 namespace src\lib\libhead;
 
-use src\lib\Main;
+use \src\lib\Main as Main;
 
 class Head extends Main
 {
